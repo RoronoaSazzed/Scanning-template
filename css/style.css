@@ -1,3 +1,8 @@
+:root {
+    --scan-positioning-size: 70%;
+}
+
+/* 
 .containerSection {
     position: relative;
 }
@@ -7,13 +12,23 @@
     position: absolute;
     top: 0px;
     left: 0px;
-}
+} */
 
 .scannerIcon {
-    position: relative;
+    position: absolute;
+    top: 0%;
+    left: 0%;
     height: 150px;
     width: 150px;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    animation-name: scanning;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    transform: translate(-50%, -50%);
 }
 
 .topLeftTop,
@@ -25,49 +40,91 @@
 .leftBottomLeft,
 .leftTopLeft {
     position: absolute;
-    border: 1px solid red;
+    border: 2px solid #5f99fc;
 }
 
 .topLeftTop {
-    right: 75%;
+    right: var(--scan-positioning-size);
     left: 0%;
 }
 
 .topRightTop {
-    left: 75%;
+    left: var(--scan-positioning-size);
     right: 0%;
 }
 
 .topRightRight {
     top: 0%;
-    bottom: 75%;
+    bottom: var(--scan-positioning-size);
     right: 0%;
 }
 
 .bottomRightRight {
-    top: 75%;
+    top: var(--scan-positioning-size);
     bottom: 0%;
     right: 0%;
 }
 
 .bottomRightBottom {
-    left: 75%;
+    left: var(--scan-positioning-size);
     right: 0%;
     bottom: 0%;
 }
 
 .bottomLeftBottom {
-    right: 75%;
+    right: var(--scan-positioning-size);
     left: 0%;
     bottom: 0%;
 }
 
-.leftBottomLeft{
-    top: 75%;
+.leftBottomLeft {
+    top: var(--scan-positioning-size);
     bottom: 0%;
 }
 
-.leftTopLeft{
+.leftTopLeft {
     top: 0%;
-    bottom: 75%;
+    bottom: var(--scan-positioning-size);
+}
+
+/* @keyframes scanning {
+    
+    25% {
+        transform: translate(100%, 0%);
+    }
+
+    50% {
+        transform: translate(100%, 100%);
+    }
+
+    75% {
+        transform: translate(-100%, 100%);
+    }
+
+    100% {
+        transform: translate(-100%, -100%);
+    }
+} */
+
+@keyframes scanning {
+    
+    25% {
+        top: 0%;
+        left: 100%;
+    }
+
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+
+    75% {
+        top: 100%;
+        left: 0%;
+    }
+
+    100% {
+        top: 0%;
+        left: 0%;
+    }
 }
