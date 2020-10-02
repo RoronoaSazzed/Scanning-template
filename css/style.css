@@ -1,0 +1,73 @@
+.containerSection {
+    position: relative;
+}
+
+.back,
+.front {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.scannerIcon {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: blanchedalmond;
+}
+
+.topLeftTop,
+.topRightTop,
+.topRightRight,
+.bottomRightRight,
+.bottomRightBottom,
+.bottomLeftBottom,
+.leftBottomLeft,
+.leftTopLeft {
+    position: absolute;
+    border: 1px solid red;
+}
+
+.topLeftTop {
+    right: 75%;
+    left: 0%;
+}
+
+.topRightTop {
+    left: 75%;
+    right: 0%;
+}
+
+.topRightRight {
+    top: 0%;
+    bottom: 75%;
+    right: 0%;
+}
+
+.bottomRightRight {
+    top: 75%;
+    bottom: 0%;
+    right: 0%;
+}
+
+.bottomRightBottom {
+    left: 75%;
+    right: 0%;
+    bottom: 0%;
+}
+
+.bottomLeftBottom {
+    right: 75%;
+    left: 0%;
+    bottom: 0%;
+}
+
+.leftBottomLeft{
+    top: 75%;
+    bottom: 0%;
+}
+
+.leftTopLeft{
+    top: 0%;
+    bottom: 75%;
+}
