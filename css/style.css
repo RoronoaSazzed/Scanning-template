@@ -2,27 +2,32 @@
     --scan-positioning-size: 70%;
 }
 
-/* 
-.containerSection {
-    position: relative;
+.maxWidth{
+    width: 100%;
+    height: auto;
 }
 
-.back,
+.containerSection {
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: aquamarine;
+}
+
 .front {
     position: absolute;
-    top: 0px;
-    left: 0px;
-} */
+    top: 0%;
+    left: 0%;
+} 
 
 .scannerIcon {
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 150px;
-    width: 150px;
-    /* background-color: blanchedalmond; */
+    height: 10vw;
+    width: 10vw;
     animation-name: scanning;
-    animation-duration: 4s;
+    animation-duration: 8s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-play-state: running;
@@ -87,44 +92,30 @@
     bottom: var(--scan-positioning-size);
 }
 
-/* @keyframes scanning {
-    
-    25% {
-        transform: translate(100%, 0%);
-    }
-
-    50% {
-        transform: translate(100%, 100%);
-    }
-
-    75% {
-        transform: translate(-100%, 100%);
-    }
-
-    100% {
-        transform: translate(-100%, -100%);
-    }
-} */
-
 @keyframes scanning {
+
+    0%{
+        top: 10%;
+        left: 5%;
+    }
     
     25% {
-        top: 0%;
-        left: 100%;
+        top: 10%;
+        left: 95%;
     }
 
     50% {
-        top: 100%;
-        left: 100%;
+        top: 90%;
+        left: 95%;
     }
 
     75% {
-        top: 100%;
-        left: 0%;
+        top: 90%;
+        left: 5%;
     }
 
     100% {
-        top: 0%;
-        left: 0%;
+        top: 10%;
+        left: 5%;
     }
 }
