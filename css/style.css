@@ -96,6 +96,15 @@
     bottom: var(--scan-positioning-size);
 }
 
+@media(max-width: 600px)
+{
+    .scannerIcon 
+    {
+        width: 25vw;
+        height: 25vw;
+    }
+}
+
 @keyframes scanning {
 
     0%{

@@ -12,16 +12,22 @@ $(document).ready(function(){
 
 	  // console.log(x.left , x.top);
 
-	  x.left = (x.left + $(".scannerIcon").width()*0.5 -$(".scannerIcon").width()*1.3) ;
-	  x.top = (x.top + $(".scannerIcon").height()*0.5 -$(".scannerIcon").height() * 1.3);
+	  x.left = (x.left + $(".scannerIcon").width()*0.5 -$(".scannerIcon").width()*1.35) ;
+	  x.top = (x.top + $(".scannerIcon").height()*0.5 -$(".scannerIcon").height() * 1.35);
+
+	  if( $( window ).width() <=600 )
+	  {
+	  	x.left = (x.left + $(".scannerIcon").width()*0.5 -$(".scannerIcon").width()*2) ;
+	  	x.top = (x.top + $(".scannerIcon").height()*0.5 -$(".scannerIcon").height() * 2);
+	  }
 
 	  if (x.left < 0)
 	  {
-	  	x.left= 0 ;
+	  	x.left = 0 ;
 	  }
 	  if (x.top < 0 )
 	  {
-	  	x.top=0;
+	  	x.top = 0;
 	  }
 
 	  // console.log(x.left , x.top);
@@ -32,9 +38,8 @@ $(document).ready(function(){
 	}, 100);
 
 
-	//refresh page on browser resize
-	// $(window).bind('resize', function(e)
-	// {
-	//   this.location.reload(false);
-	// });
+	$(window).bind('resize', function(e)
+	{
+	  this.location.reload(false);
+	});
 });
