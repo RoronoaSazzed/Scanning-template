@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-	  console.log("W: "+$("#imgContainer").width() + "H: "+$("#imgContainer").height() );
-
 	  var imgX = $("#imgContainer").width() ;
 	  var imgY = $("#imgContainer").height() ;
 
@@ -14,11 +12,21 @@ $(document).ready(function(){
 
 	  // console.log(x.left , x.top);
 
-	  x.left = x.left + $(".scannerIcon").width()*0.5 -$(".scannerIcon").width();
-	  x.top = x.top + $(".scannerIcon").height()*0.5 -$(".scannerIcon").height();
+	  x.left = (x.left + $(".scannerIcon").width()*0.5 -$(".scannerIcon").width()*1.3) ;
+	  x.top = (x.top + $(".scannerIcon").height()*0.5 -$(".scannerIcon").height() * 1.3);
+
+	  if (x.left < 0)
+	  {
+	  	x.left= 0 ;
+	  }
+	  if (x.top < 0 )
+	  {
+	  	x.top=0;
+	  }
 
 	  // console.log(x.left , x.top);
 
+	  // $('.scannerIcon').css('background-position', "-"+ (0) +"px -" + (0) + "px");
 	  $('.scannerIcon').css('background-position', "-"+ (x.left) +"px -" + (x.top) + "px");
 
 	}, 100);
